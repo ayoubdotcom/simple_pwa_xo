@@ -1,8 +1,8 @@
 {
   "name": "XO — Simple PWA",
   "short_name": "XO",
-  "start_url": "https://ayoubdotcom.github.io/simple_pwa_xo/",
-  "scope": "https://ayoubdotcom.github.io/simple_pwa_xo/",
+  "start_url": "./",
+  "scope": "/simple_pwa_xo/",
   "display": "standalone",
   "theme_color": "#1e293b",
   "background_color": "#071024",
