@@ -1,5 +1,5 @@
 const CACHE = 'xo-pwa-v1';
-const ASSETS = ['/', '/index.html', '/styles.css', '/app.js', '/manifest.json'];
+const ASSETS = ['index.html', 'styles.css', 'app.js', 'manifest.json', 'icons/icon-192.svg', 'icons/icon-512.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));

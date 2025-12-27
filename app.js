@@ -68,7 +68,7 @@ render();
 
 // Service worker registration
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 
 // Basic beforeinstallprompt handling (optional)
