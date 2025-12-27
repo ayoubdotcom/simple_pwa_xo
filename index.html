@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XO — Simple PWA</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#1e293b">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>XO</h1>
+      <div class="status">Joueur: <span id="currentPlayer">X</span></div>
+    </header>
+
+    <section class="board" id="board">
+      <!-- 9 cells -->
+      <button class="cell" data-index="0"></button>
+      <button class="cell" data-index="1"></button>
+      <button class="cell" data-index="2"></button>
+      <button class="cell" data-index="3"></button>
+      <button class="cell" data-index="4"></button>
+      <button class="cell" data-index="5"></button>
+      <button class="cell" data-index="6"></button>
+      <button class="cell" data-index="7"></button>
+      <button class="cell" data-index="8"></button>
+    </section>
+
+    <footer class="controls">
+      <div class="scores">X: <span id="scoreX">0</span> — O: <span id="scoreO">0</span></div>
+      <div class="buttons">
+        <button id="reset">Réinitialiser</button>
+      </div>
+    </footer>
+
+    <div id="message" class="overlay hidden"></div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
