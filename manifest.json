@@ -1,7 +1,7 @@
 {
   "name": "XO — Simple PWA",
   "short_name": "XO",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#1e293b",
   "background_color": "#071024",
