@@ -73,7 +73,25 @@ if('serviceWorker' in navigator){
 
 // Basic beforeinstallprompt handling (optional)
 let deferredPrompt;
+const installBtn = document.getElementById('install');
+
 window.addEventListener('beforeinstallprompt', (e)=>{
   e.preventDefault();
   deferredPrompt = e;
+  if(installBtn) installBtn.classList.remove('hidden');
 });
+
+if(installBtn){
+  installBtn.addEventListener('click', async ()=>{
+    if(!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const choice = await deferredPrompt.userChoice;
+    if(choice && choice.outcome === 'accepted'){
+      showMessage('Installation acceptée — merci !');
+    } else {
+      showMessage("Installation refusée");
+    }
+    deferredPrompt = null;
+    installBtn.classList.add('hidden');
+  });
+}
